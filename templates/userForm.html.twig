@@ -1,0 +1,29 @@
+{% extends ('base.html.twig') %}
+
+{% block title %}
+    Registro de Usuarios
+{% endblock %}
+
+{% block body %}
+
+    <div class="box">
+        <div class="row">
+    <h1>Registro de Usuarios</h1>
+    {{form_start(form)}}
+    <div class="form-group col-lg-8">
+        {{form_row(form.name)}}
+    </div>
+    <div class="form-group col-lg-8">
+        {{form_row(form.lastname)}}
+    </div>
+    <div class="form-group col-lg-8">
+        {{form_row(form.email)}}
+    </div>
+    <div class="form-group col-lg-8">
+        {{form_row(form.pass)}}
+    </div>
+        {{form_widget(form.submit)}}
+    {{form_end(form)}}
+        </div>
+    </div>
+{% endblock %}

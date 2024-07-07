@@ -1,0 +1,23 @@
+index:
+    path: /indexGym
+    controller: App\Controller\DefaultController::index 
+
+create:
+    path: /createUser
+    controller: App\Controller\DefaultController::createUser
+
+login:
+    path: /login
+    controller: App\Controller\DefaultController::login
+
+newroutine:
+    path: /newRoutine
+    controller: App\Controller\DefaultController::newRoutine
+
+editroutine:
+    path: /editRoutine/{id}
+    controller: App\Controller\DefaultController::editRoutine
+
+deleteroutine:
+    path: /deleteRoutine/{id}
+    controller: App\Controller\DefaultController::deleteRoutine

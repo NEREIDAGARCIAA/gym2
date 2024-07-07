@@ -1,0 +1,16 @@
+{% extends ('base.html.twig') %}
+
+{% block title %}
+    Inicio
+{% endblock %}
+
+{% block body %}
+    <div class="box">
+        <div class="row">
+    <h1>Super Sayagym</h1>
+    
+    <a href="{{path('login')}}" class="btn btn-primary">Iniciar Sesion</a>
+    <a href="{{path('create')}}" class="btn btn-success ">Registrarse</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends ('base.html.twig') %}
+
+{% block title %}
+    Inicio
+{% endblock %}
+
+{% block body %}
+
+<img src="{{ asset('images/sayayin.jpg') }}" class="rounded float-end" alt="otrosayayin">
+
+    <div class="box">
+        <div class="row">
+    <h1>Control de rutinas</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in listUsers %}
+                    <tr>
+                        <td>{{user.name}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>
+                            <a href="{{path('newroutine')}}" class="btn btn-info">Agregar rutina</a>
+                            <a href="{{path('editroutine', {'id': user.id})}}" class="btn btn-warning">Editar rutina</a>
+                            <a href="{{path('deleteroutine', {'id': user.id})}}" class="btn btn-danger">Eliminar rutina</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends ('base.html.twig') %}
+
+{% block title %}
+    Rutinas
+{% endblock %}
+
+{% block body %}
+
+    <div class="box">
+        <div class="row">
+    <h1>Nueva Rutina</h1>
+    {{form_start(form)}}
+    <div class="form-group col-lg-12">
+        {{form_row(form.name)}}
+    </div>
+    <div class="form-group col-lg-12">
+        {{form_row(form.focus)}}
+    </div>
+    <div class="form-group col-lg-12">
+        {{form_row(form.exercises)}}
+    </div>
+    <div class="form-group col-lg-12">
+        {{form_row(form.reps)}}
+    </div>
+    <div class="form-group col-lg-12">
+        {{form_row(form.series)}}
+    </div>
+        {{form_widget(form.submit)}}
+    {{form_end(form)}}
+        </div>
+    </div>
+{% endblock %}
